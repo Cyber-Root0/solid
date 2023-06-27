@@ -18,7 +18,8 @@ class Client implements data{
 
     }
 
-    public function pack(){
+    public function pack() : array
+    {
         return array(
             "id" => $this->id,
             "name" => $this->name,
@@ -27,7 +28,8 @@ class Client implements data{
         );
     }
 
-    public function getAllData(){
+    public function getAllData() : string
+    {
         return json_encode($this->pack());
     }
 }
